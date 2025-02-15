@@ -7,20 +7,20 @@ use Illuminate\Support\Facades\Schema;
 return new class extends Migration
 {
     /**
-     * Run the migrations.
+     * Executa as migrações.
      */
     public function up()
     {
         Schema::create('turmas', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->foreignId('course_id')->constrained('cursos');
+            $table->string('nome');
+            $table->foreignId('curso_id')->constrained('cursos');
             $table->timestamps();
         });
     }
 
     /**
-     * Reverse the migrations.
+     * Reverte as migrações.
      */
     public function down(): void
     {
