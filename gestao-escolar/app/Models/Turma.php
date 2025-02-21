@@ -18,8 +18,7 @@ class Turma extends Model
 
     public function curso()
     {
-        return $this->belongsTo(Professor:class);
+        return $this->belongsTo(Curso::class);
     }
 }
-
 
